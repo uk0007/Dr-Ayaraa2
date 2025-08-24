@@ -1,8 +1,8 @@
 """
-Ayurveda Personal AI — Dr. Ayra (Cloud-Compatible Version)
-----------------------------------------------------------
+Ayurveda Personal AI — Dr. Ayra (Cloud-Compatible Version, No Login Required)
+-------------------------------------------------------------------------------
 This version is fully compatible with GitHub deployment or any cloud service (Streamlit Cloud, Hugging Face Spaces, etc.).
-It removes the hard dependency on local Streamlit installation and provides a fallback message if Streamlit is unavailable.
+It removes all admin or login requirements.
 Supports default Ayurveda knowledge, multiple patients, and optional TTS audio.
 """
 
@@ -71,7 +71,7 @@ if STREAMLIT_AVAILABLE:
     st.set_page_config(page_title="Dr. Ayra", page_icon="🪷", layout="wide")
     st.title("🪷 Dr. Ayra — Ayurveda Doctor 👩‍⚕️")
 
-    # Patient Profile Section
+    # Patient Profile Section (No login required)
     patient_id = st.text_input("Enter Patient ID")
     if patient_id:
         profile = patients.get(patient_id, {})
